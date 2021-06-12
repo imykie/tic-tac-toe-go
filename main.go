@@ -32,10 +32,12 @@ func main() {
 		result := checkForWin(board)
 
 		if result != 0 {
-			fmt.Printf("Player %d wins\n", result)
+			fmt.Printf("Player %d wins\n\n", result)
+			displayBoard(board)
 			gameOver = true
 		} else if turn == 9 {
-			fmt.Printf("Tie game!\n")
+			fmt.Printf("Tie game!\n\n")
+			displayBoard(board)
 			gameOver = true
 		} else {
 			turn++
